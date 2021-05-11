@@ -10,13 +10,36 @@
 .s-navigation {
   padding: 2px 2px;
 }
+.s-navigation ul {
+  margin:0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  color: white;
+}
+.s-navigation li{
+  position: relative;
+}
 
+.s-navigation--item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px 7px 10px;
+  margin-left: 5px;
+  font-size: 14px;
+  color: white;
+  white-space: nowrap;
+  transition: 0.3s;
+  border-radius: 50px;
+}
 .s-navigation .not-selected {
-  color: #c4c8cc;
+  color: white;
 
   &:hover {
-    background-color: #404345;
-    color: #f2f2f3;
+    background-color: #787a7a;
+    color: white;
     text-decoration: none;
     outline: none;
   }
@@ -31,6 +54,7 @@
   padding-left: 16px;
   padding-right: 16px;
   margin-right: 0;
+
 
   &:hover {
     background-color: #404345;

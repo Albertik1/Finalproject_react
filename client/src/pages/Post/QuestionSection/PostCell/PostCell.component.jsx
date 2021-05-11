@@ -6,6 +6,7 @@ import {getPost, deletePost} from '../../../../redux/posts/posts.actions';
 
 import TagBadge from '../../../../components/TagBadge/TagBadge.component';
 import UserCard from '../../../../components/UserCard/UserCard.component';
+import VoteCell from '../VoteCell/VoteCell.component';
 
 import './PostCell.styles.scss';
 
@@ -13,7 +14,7 @@ const PostCell = ({
   deletePost,
   auth,
   post: {
-    post: {id, post_body, tagname, user_id, username, created_at},
+    post: {id, post_body, tagname, user_id, username, created_at, answer_count, comment_count},
   },
   postId,
 }) => {
@@ -26,27 +27,28 @@ const PostCell = ({
     <Fragment>
       <div className='post-cell'>
         <div className='post-text fc-black-800'>{post_body}</div>
-        <div className='post-tags fc-black-800'>
-          <TagBadge tag_name={tagname} size={'s-tag'} float={'left'} />
+        <TagBadge tag_name={tagname} size={'s-tag'} float={'left'}/>
+        {/*<VoteCell answerCount={answer_count} commentCount={comment_count} />*/}
+        <div className='vote-cell fc-black-800'>
+          <div className='flex-container'>
+            <div className='vote2'>
+              <span className='vote2-count'>{comment_count}</span>
+              <div className='count-text'>comments</div>
+            </div>
+            <div className='answer'>
+              <span className='answer-count'>{answer_count}</span>
+              <div className='count-text'>answers</div>
+            </div>
+            <div className='vote2'>
+              <span className='vote2-count'>{tagname ? 1 : 0}</span>
+              <div className='count-text'>tags</div>
+            </div>
+          </div>
         </div>
         <div className='post-actions fc-black-800'>
           <div className='post-actions-extended'>
             <div className='post-btns'>
               <div className='post-menu'>
-                <Link
-                  className='post-links'
-                  title='short permalink to this question'
-                  to='/'
-                >
-                  share
-                </Link>
-                <Link
-                  className='post-links'
-                  title='Follow this question to receive notifications'
-                  to='/'
-                >
-                  follow
-                </Link>
                 {!auth.loading &&
                   auth.isAuthenticated &&
                   parseInt(user_id) === auth.user.id && (
@@ -60,13 +62,9 @@ const PostCell = ({
                       delete
                     </Link>
                   )}
+                  
               </div>
             </div>
-            <UserCard
-              created_at={created_at}
-              user_id={user_id}
-              username={username}
-            />
           </div>
         </div>
       </div>

@@ -38,13 +38,11 @@ const QuestionsPage = ({getPosts, post: {posts, loading}}) => {
           <h3 className='questions-headline'>
             {searchQuery ? 'Search Results' : 'All Questions'}
           </h3>
-          <div className='questions-btn'>
             <LinkButton
               text={'Ask Question'}
               link={'/add/question'}
               type={'s-btn__primary'}
             />
-          </div>
         </div>
         {searchQuery ? (
           <div className='search-questions'>

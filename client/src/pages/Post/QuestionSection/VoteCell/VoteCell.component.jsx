@@ -1,24 +1,23 @@
 import React, {Fragment} from 'react';
 
+import TagBadge from '../../../../components/TagBadge/TagBadge.component';
+import UserCard from '../../../../components/UserCard/UserCard.component';
 import './VoteCell.styles.scss';
 
-const VoteCell = ({answerCount, commentCount}) => {
+const VoteCell = ({created_at, user_id, username, views, tagname}) => {
   return (
     <Fragment>
       <div className='vote-cell fc-black-800'>
-        <div className='stats'>
-          <div className='vote'>
-            <span className='vote-count'>{answerCount}</span>
-            <div className='count-text'>answers</div>
-          </div>
-          <div className='vote'>
-            <span className='vote-count'>{commentCount}</span>
-            <div className='count-text'>comments</div>
-          </div>
-          <div className='vote'>
-            <span className='vote-count'>1</span>
-            <div className='count-text'>tags</div>
-          </div>
+        <div className='stats-container fc-black-500'>
+          <UserCard
+              created_at={created_at}
+              user_id={user_id}
+              username={username}
+              float={'left'}
+              backgroundColor={'transparent'}
+          />
+          
+          <div className='views-text' style={{textAlign:"center"}}>{views} views</div>
         </div>
       </div>
     </Fragment>

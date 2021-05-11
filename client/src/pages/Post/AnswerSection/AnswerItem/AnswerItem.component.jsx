@@ -21,7 +21,14 @@ const AnswerItem = ({
       <div className='answer-layout'>
         <div className='vote-cell'>
           <div className='vote-container'>
-            <button
+            <UserCard
+                created_at={created_at}
+                user_id={user_id}
+                username={username}
+                dateType={'answered'}
+                backgroundColor={'transparent'}
+              />
+            {/*<button
               className='vote-up'
               title='This answer is useful (click again to undo)'
             >
@@ -33,8 +40,8 @@ const AnswerItem = ({
               title='This answer is not useful (click again to undo)'
             >
               <DownVote className='icon' />
-            </button>
-          </div>
+            </button>*/}
+        </div>
         </div>
         <div className='answer-item'>
           <div className='answer-content fc-black-800'>
@@ -43,7 +50,7 @@ const AnswerItem = ({
           <div className='answer-actions'>
             <div className='action-btns'>
               <div className='answer-menu'>
-                <Link
+                {/*<Link
                   className='answer-links'
                   title='short permalink to this question'
                   to='/'
@@ -56,7 +63,7 @@ const AnswerItem = ({
                   to='/'
                 >
                   follow
-                </Link>
+                </Link>*/}
                 {!auth.loading &&
                   auth.isAuthenticated &&
                   parseInt(user_id) === auth.user.id && (
@@ -72,13 +79,7 @@ const AnswerItem = ({
                   )}
               </div>
             </div>
-            <UserCard
-              created_at={created_at}
-              user_id={user_id}
-              username={username}
-              dateType={'answered'}
-              backgroundColor={'transparent'}
-            />
+            
           </div>
         </div>
       </div>

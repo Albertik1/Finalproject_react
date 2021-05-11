@@ -19,10 +19,10 @@ const UserCard = ({
         style={{float: float, backgroundColor: backgroundColor}}
       >
         <div className='user-block fc-black-500'>
-          <div className='action-time'>
+          {/*<div className='action-time'>
             {dateType ? dateType : 'asked'} {moment(created_at).fromNow(true)}{' '}
             ago
-          </div>
+  </div>*/}
           <div className='user-logo'>
             <Link className='user-link' to={`/users/${user_id}`}>
               <div className='logo-wrapper'>
@@ -34,12 +34,12 @@ const UserCard = ({
             </Link>
           </div>
           <div className='user-profile'>
-            <Link
+            {/*<Link
               className='user-profile-link fc-blue-600'
               to={`/users/${user_id}`}
-            >
-              {username}
-            </Link>
+            >*/}
+            {username}
+            {/*</Link>*/}
           </div>
         </div>
       </div>

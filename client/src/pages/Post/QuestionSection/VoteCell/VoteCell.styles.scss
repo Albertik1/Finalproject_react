@@ -1,4 +1,5 @@
 .vote-cell {
+  //border: solid gold;
   width: auto;
   padding-right: 16px;
   vertical-align: top;
@@ -7,8 +8,11 @@
   grid-column-end: auto;
   color:#6a737c;
 
+  .flex-container{
+    display: flex;
+    justify-content: center;
+  
   .vote  {
-    padding: 0;
     margin-bottom: 8px;
     text-align: center;
 
@@ -19,5 +23,30 @@
     .count-text {
       font-size: 12px;
     }
+  }
+
+  .answer{
+    color: #63b47c;
+    padding: 0px;
+    border: 1px solid #63b47c;
+    border-radius: 3px;
+    margin-left: 10px;
+
+    .answer-count {
+      font-size: 20px;
+    }
+
+    .count-text {
+      font-size: 12px;
+    }
+  }
+  }
+
+  .flex-container > div {
+    width: 70px;
+    height: fit-content;
+    text-align: center;
+    font-size: 30px;
+    
   }
 }

@@ -27,16 +27,7 @@ const UserPage = ({getUser, user: {user, loading}, match}) => {
       <div id='mainbar' className='user-main-bar pl24 pt24'>
         <div className='user-card'>
           <div className='grid--cell s-navigation mb16'>
-            <Link
-              to='#'
-              className='s-navigation--item is-selected'
-              data-shortcut='P'
-            >
-              Profile
-            </Link>
-            <Link to='#' className='s-navigation--item' data-shortcut='A'>
-              Activity
-            </Link>
+            <h1 style={{color:"#ef6603"}}>Profile</h1>
           </div>
           <div className='grid'>
             <div className='img-card'>
@@ -118,57 +109,6 @@ const UserPage = ({getUser, user: {user, loading}, match}) => {
           </div>
         </div>
         <div className='row-grid'>
-          <div className='grid-cell1'>
-            <div className='cell-layout'>
-              <div className='community'>
-                <h3 className='bc-black-3'>
-                  <span className='icon'>
-                    <svg
-                      aria-hidden='true'
-                      className='svg-icon native icon-logo-sex'
-                      width='18'
-                      height='18'
-                      viewBox='0 0 18 18'
-                    >
-                      <path
-                        d='M3 4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2H3z'
-                        fill='#8FD8F7'
-                      />
-                      <path
-                        d='M15 11H3c0 1.1.9 2 2 2h5v3l3-3a2 2 0 0 0 2-2z'
-                        fill='#155397'
-                      />
-                      <path fill='#46A2D9' d='M3 5h12v2H3z' />
-                      <path fill='#2D6DB5' d='M3 8h12v2H3z' />
-                    </svg>
-                  </span>
-                  <span className='text fw-bold fc-dark bc-black-3'>
-                    Communities
-                  </span>
-                </h3>
-                <ul>
-                  <li className='item'>
-                    <Link to='/'>
-                      <span>
-                        <Logo className='logo' />
-                      </span>
-                      <span className='fc-blue-600 fs-body2'>
-                        Stack Overflow
-                      </span>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div className='user-posts'>
-                <h3 className='fw-bold fc-dark bc-black-3'>
-                  Top network posts
-                </h3>
-                <p className='fc-light'>
-                  We respect a laser-like focus on one topic.
-                </p>
-              </div>
-            </div>
-          </div>
           <div className='grid-cell2'>
             <div className='top-tags'>
               <h3 className='fw-bold fc-dark bc-black-3'>Top Tags</h3>

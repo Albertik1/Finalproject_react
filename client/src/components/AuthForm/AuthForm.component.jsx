@@ -91,56 +91,13 @@ const AuthForm = ({register, login, action}) => {
               >
                 {action}
               </button>
+              <div className='redirects fc-black-500'>
+                {action === 'Sign up' ? signUpLink : logInLink} 
+              </div>
             </div>
           </form>
-          <div className='fs-caption license fc-black-500'>
-            By clicking “{action}”, you agree to our{' '}
-            <Link
-              to='https://stackoverflow.com/legal/terms-of-service/public'
-              className='-link'
-            >
-              terms of service
-            </Link>
-            ,{' '}
-            <Link
-              to='https://stackoverflow.com/legal/privacy-policy'
-              name='privacy'
-              className='-link'
-            >
-              privacy policy
-            </Link>{' '}
-            and{' '}
-            <Link
-              to='https://stackoverflow.com/legal/cookie-policy'
-              className='-link'
-            >
-              cookie policy
-            </Link>
-            <input type='hidden' name='legalLinksShown' value='1' />
-          </div>
         </div>
-        <div className='redirects fc-black-500'>
-          {action === 'Sign up' ? signUpLink : logInLink}
-          <div>
-            Are you an employer?{' '}
-            <Link
-              to='https://careers.stackoverflow.com/employer/login'
-              name='talent'
-            >
-              Sign up on Talent{' '}
-              <svg
-                aria-hidden='true'
-                className='svg-icon va-text-bottom sm-d-none icon-share-sm'
-                width='14'
-                height='14'
-                viewBox='0 0 14 14'
-              >
-                <path d='M5 1H3a2 2 0 0 0-2 2v8c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V9h-2v2H3V3h2V1z' />
-                <path d='M7 1h6v6h-2V4.5L6.5 9 5 7.5 9.5 3H7V1z' />
-              </svg>
-            </Link>
-          </div>
-        </div>
+        
       </div>
     </Fragment>
   );

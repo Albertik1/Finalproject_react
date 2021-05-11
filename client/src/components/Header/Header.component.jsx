@@ -3,11 +3,13 @@ import {Link, useHistory} from 'react-router-dom';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {logout} from '../../redux/auth/auth.actions';
+import {NavLink} from 'react-router-dom';
 
 import {ReactComponent as Search} from '../../assets/Search.svg';
 import {ReactComponent as Logo} from '../../assets/LogoMd.svg';
 import Spinner from '../Spinner/Spinner.component';
 import LinkButton from '../LinkButton/LinkButton.component';
+
 
 import './Header.styles.scss';
 
@@ -38,23 +40,94 @@ const Header = ({auth: {isAuthenticated, loading, user}, logout}) => {
 
   const authTabs = (
     <div className='s-navigation'>
-      <Link to='/' className='s-navigation--item is-selected'>
-        Products
+      <Link to='/' className='s-navigation--item' style={{color:'white'}}>
+        Home 
       </Link>
-    </div>
+      <Link to='/' className='s-navigation--item' style={{color:'white'}}>
+        About Us 
+      </Link>
+      <Link to='/' className='s-navigation--item is-selected' style={{color:'white'}}>
+        Q&A 
+      </Link>
+      <Link to='/' className='s-navigation--item' style={{color:'white'}}>
+        Campus Life 
+      </Link>
+      <Link to='/' className='s-navigation--item' style={{color:'white'}}>
+        Contact Us 
+      </Link>
+      </div>
+
   );
 
   const guestTabs = (
-    <div className='s-navigation'>
-      <Link to='/' className='s-navigation--item is-selected'>
-        Products
+    <div className='s-navigation' >
+      <ul >
+        <li><a className='s-navigation--item' href="https://www.csie.ndhu.edu.tw/en/" style={{color:'white'}}> Home</a></li>
+        <li><a className='s-navigation--item' href="https://www.csie.ndhu.edu.tw/en/" style={{color:'white'}}> About Us</a></li>
+        <Link to='/' className='s-navigation--item is-selected' style={{color:'white'}}>
+        Q&A 
+        </Link>
+        <li><a className='s-navigation--item' href="https://www.csie.ndhu.edu.tw/en/" style={{color:'white'}}> Campus Life </a></li>
+        <li><a className='s-navigation--item' href="https://www.csie.ndhu.edu.tw/en/" style={{color:'white'}}> Contact Us</a></li>
+      </ul>
+      {/*<Link to='/home' className='s-navigation--item' style={{color:'white'}}>
+        Home 
+  </Link>
+      <Link to='/' className='s-navigation--item' style={{color:'white'}}>
+        About Us 
       </Link>
-      <Link to='/' className='s-navigation--item not-selected'>
-        Customers
+      <Link to='/' className='s-navigation--item is-selected' style={{color:'white'}}>
+        Q&A 
       </Link>
-      <Link to='/' className='s-navigation--item not-selected'>
-        Use cases
+      <Link to='/' className='s-navigation--item' style={{color:'white'}}>
+        Campus Life 
       </Link>
+      <Link to='/' className='s-navigation--item' style={{color:'white'}}>
+        Contact Us 
+  </Link>*/}
+      {/*<NavLink
+        exact
+        activeClassName='active'
+        className='s-navigation--item not-selected'
+        to='/'
+      >
+        Home
+      </NavLink>
+
+      <NavLink
+        exact
+        activeClassName='active'
+        className='s-navigation--item not-selected'
+        to='/'
+      >
+        About Us
+      </NavLink>
+
+      <NavLink
+          activeClassName='s'
+          className='s-navigation--item is-selected'
+          to='/questions'
+        >
+          Q&A 
+      </NavLink>
+
+      <NavLink
+        exact
+        activeClassName='active'
+        className='s-navigation--item not-selected'
+        to='/'
+      >
+        Campus Life
+      </NavLink>
+      <NavLink
+        exact
+        activeClassName='active'
+        className='s-navigation--item not-selected'
+        to='/'
+      >
+        Contact Us
+      </NavLink>
+      */}
     </div>
   );
 

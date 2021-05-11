@@ -12,7 +12,6 @@ const PageContainer = ({component: Component}) => {
             <SideBar />
             <div id='content'>
               <Component {...this.props} />
-              <RightSideBar />
             </div>
           </div>
         </Fragment>

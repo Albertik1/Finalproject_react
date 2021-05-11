@@ -15,46 +15,50 @@ import TagPage from './pages/TagPage/TagPage.component';
 import UserPage from './pages/UserPage/UserPage.component';
 import NotFound from './pages/NotFound/NotFound.component';
 
+
 const HomePageComponent = withPageTitle({
   component: PageContainer({component: HomePage}),
-  title:
-    'CLONE Stack Overflow - Where Developers Learn, Share, & Build Careers',
+  title: 'Q&A - CSIE Overflow',
 });
+
 
 const QuestionsPageComponent = withPageTitle({
   component: PageContainer({component: QuestionsPage}),
-  title: 'All Questions - CLONE Stack Overflow',
+  title: 'Q&A - CSIE Overflow',
 });
 
 const TagsPageComponent = withPageTitle({
   component: PageContainer({component: TagsPage}),
-  title: 'Tags - CLONE Stack Overflow',
+  title: 'Tags - CSIE Overflow',
 });
 
 const UsersPageComponent = withPageTitle({
   component: PageContainer({component: UsersPage}),
-  title: 'Users - CLONE Stack Overflow',
+  title: 'Users - CSIE Overflow',
 });
 
 const RegisterComponent = withPageTitle({
   component: Register,
-  title: 'Sign Up - CLONE Stack Overflow',
+  title: 'Sign Up - CSIE Overflow',
 });
 
 const LoginComponent = withPageTitle({
   component: Login,
-  title: 'Log In - CLONE Stack Overflow',
+  title: 'Log In - CSIE Overflow',
 });
 
 const PostFormComponent = withPageTitle({
   component: PostForm,
-  title: 'Ask a Question - CLONE Stack Overflow',
+  title: 'Ask a Question - CSIE Overflow',
 });
 
 const NotFoundComponent = withPageTitle({
   component: NotFound,
   title: 'Error 404',
 });
+
+
+
 
 const PostComponent = PageContainer({component: Post});
 const UserPageComponent = PageContainer({component: UserPage});
@@ -74,6 +78,7 @@ const Routes = () => {
       <Route exact path='/tags/:tagname' component={TagPageComponent} />
       <Route exact path='/add/question' component={PostFormComponent} />
       <Route path='*' component={NotFoundComponent} />
+      
     </Switch>
   );
 };

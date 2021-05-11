@@ -61,23 +61,17 @@ const CommentCell = ({
                       &nbsp;&ndash;&nbsp;
                       <TagBadge
                         tag_name={comment.username}
-                        size={'s-tag'}
+                        size={'s-tag s-tag__required'}
                         link={`/users/${comment.user_id}`}
                         display={'inline'}
                       />
-                      <span
-                        title={moment(comment.created_at).fromNow(true)}
-                        style={{color: '#959ca3 !important'}}
-                        className='date fs-body1'
-                      >
-                        {moment(comment.created_at).fromNow(true)} ago
-                      </span>
+                      
                     </div>
                     {!auth.loading &&
                       auth.isAuthenticated &&
                       parseInt(comment.user_id) === auth.user.id && (
                         <Link
-                          className='s-tag s-tag__moderator'
+                          className='s-tag s-tag__sponsor'
                           style={{marginTop: '4px'}}
                           title='Delete the comment'
                           onClick={(e) => deleteComment(comment.id)}
@@ -86,6 +80,14 @@ const CommentCell = ({
                           delete
                         </Link>
                       )}
+                      &nbsp; &nbsp;
+                    <span
+                        title={moment(comment.created_at).fromNow(true)}
+                        style={{color: '#959ca3 !important'}}
+                        className='date fs-body1'
+                      >
+                        {moment(comment.created_at).fromNow(true)} ago
+                      </span>
                   </div>
                 </li>
               ))

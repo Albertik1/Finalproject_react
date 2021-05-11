@@ -1,7 +1,7 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {ReactComponent as GlobalIcon} from '../../assets/Globe.svg';
+import {ReactComponent as ThumbsIcon} from '../../assets/like.svg';
 import './SideBar.styles.scss';
 
 const SideBar = () => (
@@ -13,34 +13,21 @@ const SideBar = () => (
         className='home-link nav_link'
         to='/'
       >
-        <p>Home</p>
+        <p>
+          <ThumbsIcon className= 'icon' />
+          {'  '}Top Question
+        </p>
       </NavLink>
 
-      <div className='public-tabs'>
-        <p className='title fc-light'>PUBLIC</p>
-        <NavLink
+      <NavLink
           activeClassName='active'
           className='icon-link nav_link'
           to='/questions'
         >
-          <p>
-            <GlobalIcon className='icon' />
-            Stack Overflow
-          </p>
-        </NavLink>
-        <NavLink activeClassName='active' className='link nav_link' to='/tags'>
-          <p>Tags</p>
-        </NavLink>
-        <NavLink activeClassName='active' className='link nav_link' to='/users'>
-          <p>Users</p>
-        </NavLink>
-        <NavLink activeClassName='active' className='link nav_link' to='/jobs'>
-          <p>Jobs</p>
-        </NavLink>
-      </div>
-      <div className='teams-tabs'>
-        <p className='title fc-light'>TEAMS</p>
-      </div>
+        <p>All Question</p>
+      </NavLink>
+
+    
     </div>
   </div>
 );

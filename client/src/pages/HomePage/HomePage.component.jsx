@@ -21,13 +21,11 @@ const HomePage = ({getTopPosts, post: {posts, loading}}) => {
       <div id='mainbar' className='homepage fc-black-800'>
         <div className='questions-grid'>
           <h3 className='questions-headline'>Top Questions</h3>
-          <div className='questions-btn'>
             <LinkButton
               text={'Ask Question'}
               link={'/add/question'}
               type={'s-btn__primary'}
             />
-          </div>
         </div>
         <div className='questions-tabs'>
           <span>
