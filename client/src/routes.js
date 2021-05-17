@@ -67,7 +67,7 @@ const TagPageComponent = PageContainer({component: TagPage});
 const Routes = () => {
   return (
     <Switch>
-      <Route exact path='/' component={HomePageComponent} />
+      <Route exact path='/QA' component={HomePageComponent} />
       <Route exact path='/questions' component={QuestionsPageComponent} />
       <Route exact path='/tags' component={TagsPageComponent} />
       <Route exact path='/users' component={UsersPageComponent} />
