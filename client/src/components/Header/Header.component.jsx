@@ -40,94 +40,30 @@ const Header = ({auth: {isAuthenticated, loading, user}, logout}) => {
 
   const authTabs = (
     <div className='s-navigation'>
-      <Link to='/' className='s-navigation--item' style={{color:'white'}}>
-        Home 
-      </Link>
-      <Link to='/' className='s-navigation--item' style={{color:'white'}}>
-        About Us 
-      </Link>
-      <Link to='/' className='s-navigation--item is-selected' style={{color:'white'}}>
-        Q&A 
-      </Link>
-      <Link to='/' className='s-navigation--item' style={{color:'white'}}>
-        Campus Life 
-      </Link>
-      <Link to='/' className='s-navigation--item' style={{color:'white'}}>
-        Contact Us 
-      </Link>
-      </div>
+      <ul>
+        <li><a className='s-navigation--item' href="https://www.csie-overflow.com/index.html" style={{color:'white'}}> Home</a></li>
+        <li><a className='s-navigation--item' href="https://www.csie-overflow.com/about_us.html" style={{color:'white'}}> About Us</a></li>
+        <Link to='/' className='s-navigation--item is-selected' style={{color:'white'}}>
+          Q&A
+        </Link>
+        <li><a className='s-navigation--item' href="https://www.csie-overflow.com/campus_life.html" style={{color:'white'}}> Campus Life </a></li>
+        <li><a className='s-navigation--item' href="https://www.csie-overflow.com/contact_us.html" style={{color:'white'}}> Contact Us</a></li>
+      </ul>
+    </div>
 
   );
 
   const guestTabs = (
     <div className='s-navigation' >
       <ul >
-        <li><a className='s-navigation--item' href="https://www.csie.ndhu.edu.tw/en/" style={{color:'white'}}> Home</a></li>
-        <li><a className='s-navigation--item' href="https://www.csie.ndhu.edu.tw/en/" style={{color:'white'}}> About Us</a></li>
+        <li><a className='s-navigation--item' href="https://www.csie-overflow.com/index.html" style={{color:'white'}}> Home</a></li>
+        <li><a className='s-navigation--item' href="https://www.csie-overflow.com/about_us.html" style={{color:'white'}}> About Us</a></li>
         <Link to='/' className='s-navigation--item is-selected' style={{color:'white'}}>
-        Q&A 
+          Q&A
         </Link>
-        <li><a className='s-navigation--item' href="https://www.csie.ndhu.edu.tw/en/" style={{color:'white'}}> Campus Life </a></li>
-        <li><a className='s-navigation--item' href="https://www.csie.ndhu.edu.tw/en/" style={{color:'white'}}> Contact Us</a></li>
+        <li><a className='s-navigation--item' href="https://www.csie-overflow.com/campus_life.html" style={{color:'white'}}> Campus Life </a></li>
+        <li><a className='s-navigation--item' href="https://www.csie-overflow.com/contact_us.html" style={{color:'white'}}> Contact Us</a></li>
       </ul>
-      {/*<Link to='/home' className='s-navigation--item' style={{color:'white'}}>
-        Home 
-  </Link>
-      <Link to='/' className='s-navigation--item' style={{color:'white'}}>
-        About Us 
-      </Link>
-      <Link to='/' className='s-navigation--item is-selected' style={{color:'white'}}>
-        Q&A 
-      </Link>
-      <Link to='/' className='s-navigation--item' style={{color:'white'}}>
-        Campus Life 
-      </Link>
-      <Link to='/' className='s-navigation--item' style={{color:'white'}}>
-        Contact Us 
-  </Link>*/}
-      {/*<NavLink
-        exact
-        activeClassName='active'
-        className='s-navigation--item not-selected'
-        to='/'
-      >
-        Home
-      </NavLink>
-
-      <NavLink
-        exact
-        activeClassName='active'
-        className='s-navigation--item not-selected'
-        to='/'
-      >
-        About Us
-      </NavLink>
-
-      <NavLink
-          activeClassName='s'
-          className='s-navigation--item is-selected'
-          to='/questions'
-        >
-          Q&A 
-      </NavLink>
-
-      <NavLink
-        exact
-        activeClassName='active'
-        className='s-navigation--item not-selected'
-        to='/'
-      >
-        Campus Life
-      </NavLink>
-      <NavLink
-        exact
-        activeClassName='active'
-        className='s-navigation--item not-selected'
-        to='/'
-      >
-        Contact Us
-      </NavLink>
-      */}
     </div>
   );
 
