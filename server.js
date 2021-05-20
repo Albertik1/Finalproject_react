@@ -18,7 +18,7 @@ app.use(morgan('dev'));
 
 // cors enable
 app.options('*', cors());
-app.use(cors({ origin: 'http://localhost:5000' }));
+app.use(cors({ origin: 'http://45.141.79.18:5000/' }));
 
 // security config
 app.use(helmet());
