@@ -46,8 +46,6 @@ __:new: New Update:__ _newly added features are mentioned in issue([#15](https:/
 * As Database: `Microsoft SQL Server`
 * `.NET` as well
 
-## Contributing
-* Go to `Contributing.md`
 
 ## Guidelines to setup
 1. Create a `.env` file and the format should be as given in `.env.example`.
@@ -117,15 +115,4 @@ _NOTE: Might take sometime to start as there will be 2 servers running._
 * Setup `Sequelize` with `MySQL` in the `API`.
 * Deploy the database to cloud, API, and client-side.
 
-## DEMO
 
-#### VIDEO - [Watch the video](https://drive.google.com/file/d/1A0B3JPUUY2snG8MLZpyz2LWhvThG2epn/view?usp=sharing)
- _Video Last Updated on 18th July, 2020_
-  
-#### IMAGES
-<img src="/demo/images/1.png" width=340px /><img src="/demo/images/2.png" width=340px />
-<img src="/demo/images/3.png" width=340px /><img src="/demo/images/4.png" width=340px />
-<img src="/demo/images/5.png" width=340px /><img src="/demo/images/6.png" width=340px />
-<img src="/demo/images/7.png" width=340px /><img src="/demo/images/8.png" width=340px />
-<img src="/demo/images/9.png" width=340px /><img src="/demo/images/10.png" width=340px />
-<img src="/demo/images/11.png" width=340px /><img src="/demo/images/12.png" width=340px />
